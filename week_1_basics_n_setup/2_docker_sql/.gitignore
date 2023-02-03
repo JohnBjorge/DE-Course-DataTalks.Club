@@ -1,4 +1,11 @@
 .ipynb_checkpoints/
-ny_taxi_postgres_data/
 *.csv
 *.gz
+# exclude everything
+data_pgadmin/*
+# exception to the rule
+!data_pgadmin/.gitkeep 
+# exclude everything
+data/*
+# exception to the rule
+!data/.gitkeep
