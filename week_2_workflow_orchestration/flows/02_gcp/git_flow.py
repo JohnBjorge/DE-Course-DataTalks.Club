@@ -1,5 +1,5 @@
 from prefect.deployments import Deployment
-import etl_web_to_gcs
+from etl_web_to_gcs import etl_web_to_gcs
 from prefect.filesystems import GitHub 
 
 github_block = GitHub.load("zoom-github")
