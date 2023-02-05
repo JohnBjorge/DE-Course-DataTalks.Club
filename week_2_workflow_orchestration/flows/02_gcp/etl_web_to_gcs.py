@@ -37,9 +37,9 @@ def write_local(df: pd.DataFrame, color: str, dataset_file: str) -> Path:
      # for local execution
     # path = Path(f"./data/{color}/{dataset_file}.parquet")
 
-    # for github execution
+    # for github execution (need full path for some reason)
     path = Path(f"/home/jbjorge/my-data-engineering-zoomcamp/week_2_workflow_orchestration/flows/02_gcp/data/{color}/{dataset_file}.parquet")
-    # /home/jbjorge/my-data-engineering-zoomcamp/week_2_workflow_orchestration/flows/02_gcp/data/green
+    
     print(path)
     df.to_parquet(path, compression="gzip")
     return path
@@ -53,8 +53,8 @@ def write_gcs(path: Path) -> None:
     # gcs_block.upload_from_path(from_path=path, to_path=path)
 
     # for github execution
-    path = Path(f"./data/green/green_tripdata_2020_11.parquet")
-    gcs_block.upload_from_path(from_path=path, to_path=path)
+    path_git = Path(f"data/green/green_tripdata_2020_11.parquet")
+    gcs_block.upload_from_path(from_path=path, to_path=path_git)
     return
 
 
