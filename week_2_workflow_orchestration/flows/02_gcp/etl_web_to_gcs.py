@@ -38,7 +38,8 @@ def write_local(df: pd.DataFrame, color: str, dataset_file: str) -> Path:
     # path = Path(f"./data/{color}/{dataset_file}.parquet")
 
     # for github execution
-    path = Path(f"week_2_workflow_orchestration/flows/02_gcp/data/{color}/{dataset_file}.parquet")
+    path = Path(f"./data/{color}/{dataset_file}.parquet")
+    # /home/jbjorge/my-data-engineering-zoomcamp/week_2_workflow_orchestration/flows/02_gcp/data/green
     print(path)
     df.to_parquet(path, compression="gzip")
     return path
