@@ -54,7 +54,7 @@ def write_gcs(path: Path) -> None:
 
     # for github execution
     # path_git = Path(f"data/green/green_tripdata_2020_11.parquet")
-    gcs_block.upload_from_path(from_path=path, to_path=path_git)
+    # gcs_block.upload_from_path(from_path=path, to_path=path_git)
     return
 
 
