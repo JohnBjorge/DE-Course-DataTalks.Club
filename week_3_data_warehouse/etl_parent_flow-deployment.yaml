@@ -1,0 +1,58 @@
+###
+### A complete description of a Prefect Deployment for flow 'etl-parent-flow'
+###
+name: fhv_2019_data
+description: null
+version: 3cab86dd9f77260f9d77803b1254449f
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+tags: []
+parameters: {}
+schedule: null
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: etl-parent-flow
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 10e6bd99-5762-4cfb-9814-33de5ff427ce
+  _block_document_name: anonymous-0881abce-bf06-4ab5-a13e-3e0e5b6d35fe
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage: null
+path: /home/jbjorge/my-data-engineering-zoomcamp/week_3_data_warehouse
+entrypoint: parameterized_flow.py:etl_parent_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    months:
+      title: months
+      default:
+      - 1
+      position: 0
+      type: array
+      items:
+        type: integer
+    year:
+      title: year
+      default: 2019
+      position: 1
+      type: integer
+    color:
+      title: color
+      default: fhv
+      position: 2
+      type: string
+  required: null
+  definitions: null
