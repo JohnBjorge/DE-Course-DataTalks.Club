@@ -1,4 +1,4 @@
-## Week 1 Homework
+## Week 2 Homework
 
 Name: John Bjorge
 
