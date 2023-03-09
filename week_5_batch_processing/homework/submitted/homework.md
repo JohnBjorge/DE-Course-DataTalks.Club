@@ -2,12 +2,7 @@
 
 Name: John Bjorge
 
-Completed: 2023-03-08
-
-
-In this homework we'll put what we learned about Spark in practice.
-
-For this homework we will be using the FHVHV 2021-06 data found here. [FHVHV Data](https://github.com/DataTalksClub/nyc-tlc-data/releases/download/fhvhv/fhvhv_tripdata_2021-06.csv.gz )
+Completed: 2023-03-09
 
 ## Question 1:
 
@@ -19,93 +14,52 @@ Spark version is 3.3.2
 
 Installed spark and ran pyspark, see jupyter notebook 01_test_spark.ipynb
 
+## Question 2: 
 
+### Answer 
 
+24MB per parquet file when partition of 12.
 
+#### Explanation
 
-### Question 2: 
+Repartitioned spark dataframe with value of 12, wrote parquet files and checked average output size. See jupyter notebook 02_pyspark.ipynb
 
-**HVFHW June 2021**
+## Question 3: 
 
-Read it with Spark using the same schema as we did in the lessons.</br> 
-We will use this dataset for all the remaining questions.</br>
-Repartition it to 12 partitions and save it to parquet.</br>
-What is the average size of the Parquet (ending with .parquet extension) Files that were created (in MB)? Select the answer which most closely matches.</br>
+### Answer
 
+452,470 trips on June 15.
 
-- 2MB
-- 24MB
-- 100MB
-- 250MB
-</br></br>
+#### Explanation
 
+See jupyter notebook 02_pyspark.ipynb
 
-### Question 3: 
+## Question 4: 
 
-**Count records**  
+### Answer
 
-How many taxi trips were there on June 15?</br></br>
-Consider only trips that started on June 15.</br>
+Longest trip was 66.87 Hours
 
-- 308,164
-- 12,856
-- 452,470
-- 50,982
-</br></br>
+#### Explanation
 
+See jupyter notebook 02_pyspark.ipynb
 
-### Question 4: 
+## Question 5: 
 
-**Longest trip for each day**  
+### Answer
 
-Now calculate the duration for each trip.</br>
-How long was the longest trip in Hours?</br>
+Runs on local port 4040.
 
-- 66.87 Hours
-- 243.44 Hours
-- 7.68 Hours
-- 3.32 Hours
-</br></br>
+#### Explanation
 
-### Question 5: 
-
-**User Interface**
-
- Spark’s User Interface which shows application's dashboard runs on which local port?</br>
-
-- 80
-- 443
-- 4040
-- 8080
-</br></br>
-
+Self explanatory.
 
 ### Question 6: 
 
-**Most frequent pickup location zone**
+### Answer
 
-Load the zone lookup data into a temp view in Spark</br>
-[Zone Data](https://github.com/DataTalksClub/nyc-tlc-data/releases/download/misc/taxi_zone_lookup.csv)</br>
+Crown Heights North is most frequent pickup location zone.
 
-Using the zone lookup data and the fhvhv June 2021 data, what is the name of the most frequent pickup location zone?</br>
+#### Explanation
 
-- East Chelsea
-- Astoria
-- Union Sq
-- Crown Heights North
-</br></br>
-
-
-
-
-## Submitting the solutions
-
-* Form for submitting: https://forms.gle/EcSvDs6vp64gcGuD8
-* You can submit your homework multiple times. In this case, only the last submission will be used. 
-
-Deadline: 06 March (Monday), 22:00 CET
-
-
-## Solution
-
-We will publish the solution here
+See jupyter notebook 02_pyspark.ipynb

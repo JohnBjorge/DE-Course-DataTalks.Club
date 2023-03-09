@@ -17,4 +17,3 @@ serving_dir
 !week_6_stream_processing/avro_example/data/rides.csv
 sandbox.py
 !week_4_analytics_engineering/seeds/taxi_zone_lookup.csv
-week_5_batch_processing/code/zones/
